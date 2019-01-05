@@ -1,0 +1,27 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 224
+  Width = 371
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 168
+    Top = 32
+  end
+  object FDCon: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Suporte-Luiz\Documents\Embarcadero\Studio\Proj' +
+        'ects\Controle_Financeiro\Banco\Controle_Financiro.db'
+      'OpenMode=ReadWrite'
+      'DriverID=SQLite')
+    Connected = True
+    Left = 48
+    Top = 8
+  end
+  object QRYCategoria: TFDQuery
+    Connection = FDCon
+    SQL.Strings = (
+      'Select * from Categoria')
+    Left = 48
+    Top = 56
+  end
+end
